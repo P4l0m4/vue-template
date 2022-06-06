@@ -18,11 +18,11 @@ export default {
 <style lang="scss" scoped>
 .home {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   align-content: center;
   justify-content: center;
   height: 100%;
+
   &__title {
     margin-top: 24px;
   }

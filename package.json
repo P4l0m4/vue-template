@@ -1,11 +1,14 @@
 {
-  "name": "vue-project",
+  "name": "vue-template",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lint:scss": "stylelint \"./src/**/*.{vue,scss}\" --ignore-path .gitignore",
+    "format": "prettier --ignore-path .gitignore --write **/*.{vue,js,json,css,scss,md,yml} && yarn lint:scss --fix",
+    "translations": "yarn vue-i18n-extract report -v ./src/**/*.{js,vue} -l ./src/i18n/languages/*.{js,json,yml,yaml} -d"
   },
   "dependencies": {
     "@mdi/js": "^6.7.96",
@@ -30,6 +33,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.0.3",
+    "postcss-html": "^1.4.1",
     "prettier": "^2.4.1",
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0",
@@ -39,6 +43,7 @@
     "stylelint-config-recommended-scss": "^6.0.0",
     "stylelint-config-recommended-vue": "^1.4.0",
     "stylelint-config-standard-scss": "^4.0.0",
+    "stylelint-scss": "^4.2.0",
     "vue-i18n-extract": "^2.0.7",
     "vue-template-compiler": "^2.6.14"
   }
