@@ -1,0 +1,11 @@
+@import 'plugins';
+
+body {
+  font-family: $body-font-family;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
